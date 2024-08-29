@@ -14,14 +14,17 @@ gem "jbuilder"
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem "bootsnap", require: false
 
-# Make errors better looking
-gem 'better_errors', '~> 2.10', '>= 2.10.1'
 
 # Bulma CSS
 gem 'bulma-rails', '~> 1.0', '>= 1.0.2'
 
 # Simple form
 gem 'simple_form', '~> 5.3', '>= 5.3.1'
+
+gem 'wdm', '>= 0.1.0'
+
+# Provides the Binding#of_caller method. Using binding_of_caller we can grab bindings from higher up the call stack and evaluate code in that context. Allows access to bindings arbitrarily far up the call stack, not limited to just the immediate caller. Recommended for use only in debugging situations. Do not use this in production apps.
+gem 'binding_of_caller', '~> 1.0', '>= 1.0.1'
 
 
 group :development, :test do
@@ -42,11 +45,14 @@ group :development do
   # Highlight the fine-grained location where an error occurred [https://github.com/ruby/error_highlight]
   gem "error_highlight", ">= 0.4.0", platforms: [:ruby]
 
+  # Make errors better looking
+  gem 'better_errors', '~> 2.10', '>= 2.10.1'
+
   # Guard is a command line tool to easily handle events on file system modifications.
   gem 'guard', '~> 2.18', '>= 2.18.1'
 
   # Guard::LiveReload automatically reloads your browser when 'view' files are modified.
-  gem 'guard-livereload', '~> 2.5', '>= 2.5.2'
+  gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false
 end
 
 group :test do
