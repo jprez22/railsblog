@@ -3,21 +3,23 @@
 </br>
 
 <div class="section">
-	<%= simple_form_for @post do |f| %>
+	<%= form_for(@post) do |f| %>
 
-	<div class="field form-group">
-  		<label for="exampleFormControlInput1" class="form-label">Title</label>
-  		<input type="email" class="form-control font-weight-bold" id="exampleFormControlInput1">
-	</div>
+		<div class="field form-group">
+	  		<label for="title" class="form-label font-weight-bold">Title</label>
+	  		<% f.label :title %>
+	  		<%= f.text_field :title, class:"form-control" %>
+		</div>
 
-	 </br></br>
+		 </br></br>
 
-	<div class="field form-group">
-  		<label for="exampleFormControlTextarea1" class="form-label">Content</label>
-  		<textarea class="form-control font-weight-bold" id="exampleFormControlTextarea1" rows="3"></textarea>
-	</div>
+		<div class="field form-group">
+	  		<label for="content" class="form-label font-weight-bold">Content</label>
+	  		<% f.label :content %>
+	  		<%= f.text_field :content, class:"form-control input-lg" %>
+		</div>
 
-	<%= f.button :submit, 'Create new post', class: "btn btn-dark" %> 
+		<%= f.submit 'Create new post', class: 'btn btn-primary' %>
 	
 	<% end %>
 

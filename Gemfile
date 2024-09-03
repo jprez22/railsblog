@@ -15,11 +15,6 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem "bootsnap", require: false
 
 
-# Bulma CSS
-gem 'bulma-rails', '~> 1.0', '>= 1.0.2'
-
-# Simple form
-gem 'simple_form', '~> 5.3', '>= 5.3.1'
 
 gem 'wdm', '>= 0.1.0'
 
