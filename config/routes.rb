@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   resources :posts 
  # Defines the root path route ("/")
-  root "posts#index" 
+  root "home#index" 
   get 'posts/new'
+  get 'home/about'
+  get 'posts/index'
 
 end
 

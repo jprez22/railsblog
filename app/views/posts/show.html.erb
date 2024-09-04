@@ -1,12 +1,68 @@
-<section class="section">
-	
-	<div class="container-fluid">
-		<h1 class="title"> <%= @post.title %></h1>
-	
+<div class="jumbotron">
+  <h1 class="display-4">
+  	<%= @post.title %>
+  </h1>
 
-		<div class="container-fluid">
-			<%= @post.content %>
-		</div>
-	</div>
-</section>
+  <p class="lead">
+  	<%= @post.content %>
+  </p>
+
+  
+  <hr class="my-4">
+  	<%= link_to 'Edit', edit_post_path(@post), class:"btn btn-secondary" %>
+	<%= link_to "Delete", @post, data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'}, class: "btn btn-danger" %>
+	<%= link_to 'Back', posts_path, class:"btn btn-dark" %>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<div class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"><%= @post.title %></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p><%= @post.content %></p>
+      </div>
+      <div class="modal-footer">
+        <%= link_to 'Edit', edit_post_path(@post), class:"btn btn-secondary" %>
+        <%= link_to "Delete", @post, data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'}, class: "btn btn-danger" %>
+        <%= link_to 'Back', posts_path, class:"btn btn-dark" %>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

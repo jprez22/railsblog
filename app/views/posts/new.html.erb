@@ -5,18 +5,16 @@
 <div class="section">
 	<%= form_for(@post) do |f| %>
 
-		<div class="field form-group">
+		<div class="field form-group w-25">
 	  		<label for="title" class="form-label font-weight-bold">Title</label>
-	  		<% f.label :title %>
 	  		<%= f.text_field :title, class:"form-control" %>
 		</div>
 
 		 </br></br>
 
-		<div class="field form-group">
+		<div class="form-group w-50">
 	  		<label for="content" class="form-label font-weight-bold">Content</label>
-	  		<% f.label :content %>
-	  		<%= f.text_field :content, class:"form-control input-lg" %>
+	  		<%= f.text_field :content, class:"form-control form-control-lg" %>
 		</div>
 
 		<%= f.submit 'Create new post', class: 'btn btn-primary' %>
