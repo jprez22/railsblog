@@ -17,7 +17,17 @@
 
 
 
-<section class="comments"></section>
+<section class="section comments">
+  <div class="container">
+    <h4 class="subtitle is-5"><strong><%= @post.comments.count %></strong> Comments </h4>
+    <%= render @post.comments %>
+    <div class="comment-form">
+      <hr />
+      <h5 class="subtitle is-3"> Leave a reply</h5>
+      </br>
+      <%= render 'comments/form' %>
+  </div>
+</section>
 
 
 
