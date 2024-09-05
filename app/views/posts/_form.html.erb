@@ -1,13 +1,3 @@
-<h1 class="title">New Post</h1>
-
-</br>
-
-
-<%= render 'form' %>
-
-
-<!--
-
 <div class="section">
 	<%= form_for(@post) do |f| %>
 
@@ -23,9 +13,9 @@
 	  		<%= f.text_field :content, class:"form-control form-control-lg" %>
 		</div>
 
-		<%= f.submit 'Create new post', class: 'btn btn-primary' %>
+		<%= f.button :submit, class: 'btn btn-primary' %>
 	
+		
 	<% end %>
 
 </div>
--->
