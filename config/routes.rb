@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'posts/new'
   get 'home/about'
   get 'posts/index'
+  get 'search', to: "posts#search"
 
 end
 
