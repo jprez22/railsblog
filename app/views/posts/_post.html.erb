@@ -1,1 +1,15 @@
-<h5 class="card-title"><%= link_to post.title, post %></h5>
+<div class="container">
+	<% @posts.each do |post| %>
+		<% if post.user == current_user %>
+			<div class="card">
+				<h5 class="card-title">
+					<%= link_to post.title, post %>
+				<div class="card-body">
+					<%= link_to 'Edit', edit_post_path(post), class:"btn btn-secondary" %>
+			  		<%= link_to "Delete", post_path(post), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'}, class: "btn btn-danger" %>
+				  	<%= link_to 'Back', posts_path, class:"btn btn-dark" %>
+			  	</div>
+		  	</div>
+	  	<% end %>
+  	<% end %>
+</div>

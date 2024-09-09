@@ -8,7 +8,8 @@ class PostsController < ApplicationController
 	end
 
 	def search
-		@posts = Post.where(":title LIKE ?", "%" + params[:q] + "%")
+		@query = params[:query]
+		@posts = Post.where("posts.title LIKE ?", ["%#{@query}%"])
 	end
 
 	def new

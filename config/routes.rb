@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get 'posts/new'
   get 'home/about'
   get 'posts/index'
-  get 'search', to: "posts#search"
+  get '/search', to: "posts#search"
   devise_scope :user do  
     get '/users/sign_out' => 'devise/sessions#destroy'     
   end
