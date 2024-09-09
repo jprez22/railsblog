@@ -14,6 +14,7 @@ gem "jbuilder"
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem "bootsnap", require: false
 gem 'devise', '~> 4.9', '>= 4.9.4'
+gem 'jquery-turbolinks', '~> 2.1'
 
 
 
