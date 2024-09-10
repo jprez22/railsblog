@@ -10,7 +10,7 @@ class PostsController < ApplicationController
 	def search
 		@query = params[:query]
 		@posts = Post.where("posts.title LIKE ?", ["%#{@query}%"])
-		#render "index"
+		render "index"
 	end
 
 	def new
