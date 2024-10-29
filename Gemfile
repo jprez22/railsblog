@@ -46,7 +46,7 @@ group :development do
   gem 'better_errors', '~> 2.10', '>= 2.10.1'
 
   # Guard is a command line tool to easily handle events on file system modifications.
-  gem 'guard', '~> 2.18', '>= 2.18.1'
+  gem 'guard', '~> 2.19'
 
   # Guard::LiveReload automatically reloads your browser when 'view' files are modified.
   gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false
